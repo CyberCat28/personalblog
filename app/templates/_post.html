@@ -1,0 +1,12 @@
+<table>
+  <tr valign="top">
+    <td><div class="me-3"><img src="{{ post.author.avatar(100) }}"></div></td>
+    <td>
+      <a class="text-decoration-none text-black" href="{{ url_for('user', username=post.author.username) }}"><strong><h4>{{ post.author.username }}</h4></strong></a>
+      <div>
+        <div class="text-break">{{ post.body }}</div>
+        <small class="text-muted">{{ post.timestamp.strftime('%d.%m.%Y %H:%M') }}</small>
+      </div>
+    </td>
+  </tr>
+</table>

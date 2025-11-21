@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if current_user.is_authenticated and user == current_user %}<a class="btn btn-light text-black rounded-pill text-decoration-none mb-3" href="{{ url_for('edit_profile') }}">Изменить профиль</a>{% endif %}
+<div class="text-center align-items-center">
+    <td>
+        <div>
+            <img src="{{ user.avatar(188) }}">
+            <h1>{{ user.username }}</h1>
+            {% if user.last_seen %}<strong>Последний раз в сети:</strong><br><div class="mb-3">{{ user.last_seen.strftime('%d.%m.%Y %H:%M') }}</div>{% endif %}
+        </div>
+    </td>
+    <div class="bg-light text-black rounded p-4 col-12 col-lg-8 mx-auto">
+        <td>
+            <strong>Обо мне:</strong>
+            {% if user.about_me %}<p style="white-space: pre-wrap;">{{ user.about_me }}</p>{% endif %}
+            <strong>Мои контакты:</strong>
+            {% if user.contacts %}<p style="white-space: pre-wrap;">{{ user.contacts }}</p>{% endif %}
+            <strong>Моё портфолио:</strong>
+            {% if user.portfolio %}<p style="white-space: pre-wrap;">{{ user.portfolio }}</p>{% endif %}
+        </td>
+    </div>
+</div>
+{% endblock %}

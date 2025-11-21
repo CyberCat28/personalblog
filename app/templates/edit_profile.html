@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center align-items-center">
+    <h1>Изменение профиля</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=48) }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.about_me.label }}<br>
+            {{ form.about_me(cols=50, rows=4) }}<br>
+            {% for error in form.about_me.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.contacts.label }}<br>
+            {{ form.contacts(cols=50, rows=4, wrap="soft") }}<br>
+            {% for error in form.contacts.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.portfolio.label }}<br>
+            {{ form.portfolio(cols=50, rows=4, wrap="soft") }}<br>
+            {% for error in form.portfolio.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit(class="btn btn-success rounded-pill") }}</p>
+    </form>
+</div>
+{% endblock %}
