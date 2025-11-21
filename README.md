@@ -3,6 +3,7 @@
 Чтобы авторизироваться нужно зайти на страницу /login. 
 
 Логин: Виктория
+
 Пароль: 12345
 
 <img width="1919" height="955" alt="image" src="https://github.com/user-attachments/assets/68e6dde9-6276-4a9c-978e-177eb5972c00" />
