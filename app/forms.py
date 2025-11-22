@@ -15,7 +15,7 @@ class EditProfileForm(FlaskForm):
     username = StringField('Имя пользователя', validators=[DataRequired()])
     about_me = TextAreaField('Обо мне', validators=[Length(min=0, max=1000)])
     contacts = TextAreaField('Контакты', validators=[Length(min=0, max=1000)])
-    portfolio = TextAreaField('Портфолио', validators=[Length(min=0, max=1000)])
+    portfolio = TextAreaField('Портфолио', validators=[Length(min=0, max=10000)])
     submit = SubmitField('Принять')
     
     def __init__(self, original_username, *args, **kwargs):

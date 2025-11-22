@@ -64,8 +64,7 @@ def edit_profile():
         current_user.contacts = form.contacts.data
         current_user.portfolio = form.portfolio.data
         db.session.commit()
-        flash('Изменения сохранены.')
-        return redirect(url_for('edit_profile'))
+        return redirect(url_for('about_me'))
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.about_me.data = current_user.about_me
