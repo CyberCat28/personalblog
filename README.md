@@ -1,9 +1,7 @@
 # personalblog
-
-Чтобы авторизироваться нужно зайти на страницу /login. 
-
-Логин: Виктория
-
+Для запуска приложения нужно открыть папку проекта и запутсить виртуальную среду с помощью команды venv\Scripts\activate (на windows, на linux: source venv/bin/activate), если используется PowerShell вместо команднй строки используется: venv\Scripts\Activate.ps1<br>                                          
+Чтобы авторизироваться нужно зайти на страницу /login.<br>
+Логин: Виктория<br>
 Пароль: 12345
 
 <img width="1919" height="955" alt="image" src="https://github.com/user-attachments/assets/68e6dde9-6276-4a9c-978e-177eb5972c00" />
