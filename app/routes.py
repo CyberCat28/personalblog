@@ -82,7 +82,7 @@ def create_post():
         db.session.commit()
         flash('Пост опубликован!')
         return redirect(url_for('main'))
-    return render_template('create_post.html', title='Создание', form=form)
+    return render_template('create_post.html', form=form)
 
 @app.route('/edit_post/<int:post_id>', methods=['GET', 'POST'])
 @login_required
@@ -110,4 +110,5 @@ def delete_post(post_id):
     db.session.delete(post)
     db.session.commit()
     flash('Пост удалён!')
+
     return redirect(url_for('main'))
