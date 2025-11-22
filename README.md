@@ -1,5 +1,6 @@
 # personalblog
-Для запуска приложения нужно открыть папку проекта и запутсить виртуальную среду с помощью команды venv\Scripts\activate (на windows, на linux: source venv/bin/activate), если используется PowerShell вместо команднй строки используется: venv\Scripts\Activate.ps1<br>                                          
+Для запуска приложения нужно открыть папку проекта и запутсить виртуальную среду с помощью команды venv\Scripts\activate (на windows, на linux source venv/bin/activate), если используется PowerShell вместо команднй строки используется venv\Scripts\Activate.ps1<br>
+Затем ввести команду flask run<br>
 Чтобы авторизироваться нужно зайти на страницу /login.<br>
 Логин: Виктория<br>
 Пароль: 12345
