@@ -110,5 +110,4 @@ def delete_post(post_id):
     db.session.delete(post)
     db.session.commit()
     flash('Пост удалён!')
-
     return redirect(url_for('main'))
